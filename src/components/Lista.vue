@@ -24,7 +24,7 @@ export default {
       // Se debe usar slice antes del sort, no se puede mutar el objeto original
       // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/no-side-effects-in-computed-properties.md
       console.log(this.frutas)
-      return this.frutas.sort((a, b) => b.cantidad - a.cantidad)
+      return this.frutas.slice().sort((a, b) => b.cantidad - a.cantidad)
     }
   },
   methods: {

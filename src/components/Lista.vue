@@ -2,7 +2,8 @@
     <div>
         <ul class="list-group">
             <!--Si pinta en rojo la linea, se debe agregar el elemento ":key"-->
-            <li v-for="(item) of arrayOrdenado" :key="item.id" class="list-group-item d-flex justify-content-between align-items-center" :class="item.clase" @click="aumentar(item.id)">
+            <li v-for="(item) of arrayOrdenado" :key="item.id" 
+            class="list-group-item d-flex justify-content-between align-items-center" :class="item.clase" @click="aumentar(item.id)">
                 {{item.id}} - {{item.nombre}}
                 <span class="badge badge-primary badge-pill">{{item.cantidad}}</span>
             </li>
